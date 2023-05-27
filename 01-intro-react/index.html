@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Cargar React -->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reatapp via cdn </title>
+
+
+</head>
+
+<body>
+
+  <div id="root">
+    <!-- Aqui se renderiza el componente -->
+  </div>
+
+</body>
+<script type="text/babel">
+  const atentamente = "Julian";
+  const divRoot = document.querySelector('#root');
+  const h1tag = <h1>Asi se utiliza react con su cdn online, {atentamente}</h1>;
+  ReactDOM.render(h1tag, divRoot);
+</script>
+<style>
+  body {
+    background-color: #242424;
+    color: #fff;
+
+    #id {
+      /*    alinear al centro */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+</style>
+
+</html>
