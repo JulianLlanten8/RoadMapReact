@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Este es un proyecto para el aprendizaje de la libreria de react.js
+
+este proyecto ha sido creado con [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
