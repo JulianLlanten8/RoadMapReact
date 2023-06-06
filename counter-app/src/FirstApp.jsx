@@ -25,18 +25,24 @@ const FirstApp = () => (
   </Fragment>
 );
 // Otra forma de hacerlo y la habitual
-const SecondApp = ({ title = "No tiene" }) => {
+const SecondApp = ({ title, subTitle }) => {
   // console.log(props);
   return (
     <>
       <h2>Fragmento de forma diferente</h2>
-      <p>{title}</p>
+      <p>{title}</p>, <p>{subTitle}</p>
     </>
   );
 };
 
-FirstApp.propTypes = {
+SecondApp.propTypes = {
   title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string,
+};
+
+SecondApp.defaultProps = {
+  title: "No tiene titulo",
+  subTitle: "El subtitulo por defecto",
 };
 
 export { FirstApp, SecondApp };
