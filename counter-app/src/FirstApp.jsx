@@ -32,6 +32,7 @@ const SecondApp = ({ title, subTitle }) => {
       <h2>Fragmento de forma diferente</h2>
       <h1 data-testid="test-title">{title}</h1>
       <p>{subTitle}</p>
+      <p>{subTitle}</p>
     </>
   );
 };
