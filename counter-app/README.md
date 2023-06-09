@@ -12,3 +12,7 @@
 
 test de los componente de react
 `pnpm add --save-dev react-test-renderer`
+
+No se pa que esto pero se usa
+`pnpm add -D jest-environment-jsdom`
+`pnpm add -D @babel/preset-react`

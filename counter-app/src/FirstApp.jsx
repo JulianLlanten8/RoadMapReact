@@ -30,7 +30,8 @@ const SecondApp = ({ title, subTitle }) => {
   return (
     <>
       <h2>Fragmento de forma diferente</h2>
-      <p>{title}</p>, <p>{subTitle}</p>
+      <h1 data-testid="test-title">{title}</h1>
+      <p>{subTitle}</p>
     </>
   );
 };
