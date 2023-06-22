@@ -26,7 +26,6 @@ const FirstApp = () => (
 );
 // Otra forma de hacerlo y la habitual
 const SecondApp = ({ title, subTitle }) => {
-  // console.log(props);
   return (
     <>
       <h2>Fragmento de forma diferente</h2>
