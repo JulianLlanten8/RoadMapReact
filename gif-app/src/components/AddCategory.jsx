@@ -2,7 +2,6 @@ import { useState } from "react";
 import propTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
-  
   const [inputValue, setInputValue] = useState("");
   const onInputChange = ({ target }) => {
     setInputValue(target.value);
