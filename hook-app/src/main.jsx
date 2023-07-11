@@ -3,13 +3,14 @@ import ReactDOM from "react-dom/client";
 // import { HooksApp } from "./HooksApp";
 // import { SimpleForm } from "./useEffect/SimpleForm";
 // import { FormWhitCustomHook } from "./useEffect/FormWhitCustomHook";
-// import { MultipleCustomHoook } from "./examples/MultipleCustomHoook";
-import { FocusScreen } from "./useRef/FocusScreen";
 // import { CounterWithCustomHook } from "./useState/CounterWhitCustomHook";
+// import { MultipleCustomHoook } from "./examples/MultipleCustomHoook";
+// import { FocusScreen } from "./useRef/FocusScreen";
+import { Layout } from "./useLayoutEffect/Layout";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FocusScreen />
+    <Layout />
   </React.StrictMode>
 );
