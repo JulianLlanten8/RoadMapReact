@@ -1,16 +1,27 @@
 // import { memo } from "react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useCounter } from "../hooks";
 
+const HeavyProcess = (iterations) => {
+  for (let i = 0; i < iterations; i++) {
+    console.log("Ahi vamos...");
+  }
+  return `${iterations} iteraciones realizadas.`;
+};
+
 export const MemoHook = () => {
-  const { counter, increment } = useCounter(1);
+  const { counter, increment } = useCounter(100);
   const [show, setShow] = useState(true);
+  const memorizedValue = useMemo(() => HeavyProcess(counter), [counter]);
+
   return (
     <>
       <h1>
         Counter: <small>{counter}</small>
       </h1>
       <hr />
+
+      <h4>{memorizedValue}</h4>
 
       <button className="btn btn-primary" onClick={() => increment(1)}>
         +1

@@ -7,11 +7,13 @@ import ReactDOM from "react-dom/client";
 // import { MultipleCustomHoook } from "./examples/MultipleCustomHoook";
 // import { FocusScreen } from "./useRef/FocusScreen";
 // import { Layout } from "./useLayoutEffect/Layout";
-import { Memorize } from "./Memos/Memorize";
+// import { Memorize } from "./Memos/Memorize";
+// import { MemoHook } from "./Memos/MemoHook";
+import { CallBackHook } from "./Memos/CallBackHook";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Memorize />
+    <CallBackHook />
   </React.StrictMode>
 );
