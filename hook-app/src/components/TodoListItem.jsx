@@ -5,7 +5,8 @@ export const TodoListItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
     <>
       <li className="list-group-item d-flex justify-content-between">
         <span
-          className={`align-self-center ${
+          role="button"
+          className={`align-self-center cursor-pointer ${
             todo.done && "text-decoration-line-through"
           }`}
           onClick={() => onToggleTodo(todo.id)}

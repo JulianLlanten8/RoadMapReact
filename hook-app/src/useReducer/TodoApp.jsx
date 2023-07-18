@@ -1,64 +1,20 @@
-import { useEffect, useReducer } from "react";
-import { todoReducer } from "./todoReducer";
 import { TodoList, TodoAdd } from "../components";
-
-const initialState = [
-  {
-    id: new Date().getTime(),
-    description: "Aprender React",
-    done: false,
-  },
-  {
-    id: new Date().getTime() + 1,
-    description: "Aprender Mongo",
-    done: false,
-  },
-];
-
-/**
- *@returns La función init devuelve el valor parseado de la clave "todos" del localStorage, o
- *una matriz vacía si el valor es nulo o indefinido.
- */
-const init = () => {
-  return JSON.parse(localStorage.getItem("todos")) || [];
-};
+import { useAppTodo } from "../hooks/";
 
 export const TodoApp = () => {
-  const [todos, dispatch] = useReducer(todoReducer, initialState, init);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-  const handleNewTodo = (todo) => {
-    const action = {
-      type: "[TODO] Add TODO",
-      payload: todo,
-    };
-    dispatch(action);
-  };
-
-  const handleDeleteTodo = (id) => {
-    const action = {
-      type: "[TODO] Remove TODO",
-      payload: id,
-    };
-    dispatch(action);
-  };
-
-  const onToggleTodo = (id) => {
-    console.log(id);
-    const action = {
-      type: "[TODO] Toggle TODO",
-      payload: id,
-    };
-    dispatch(action);
-  };
-
+  const {
+    todos,
+    handleNewTodo,
+    handleDeleteTodo,
+    onToggleTodo,
+    counterTodos,
+    counterNotDoneTodos,
+  } = useAppTodo();
   return (
     <>
       <h1>
-        TodoApp : 10, <small>pendientes: 2</small>
+        TodoApp : {counterTodos},{" "}
+        <small>pendientes: {counterNotDoneTodos}</small>
       </h1>
       <hr />
       <main className="row">
