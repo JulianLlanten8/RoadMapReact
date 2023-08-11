@@ -26,7 +26,7 @@ export const Quote = ({ quote, author }) => {
   );
 };
 
-Quote.PropTypes = {
+Quote.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

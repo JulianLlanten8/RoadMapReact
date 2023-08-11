@@ -1,23 +1,24 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const useFetch = (url) => {
   const [state, setState] = useState({
     data: null,
-    isloading: true,
+    isLoading: true,
     hasError: null,
   });
 
   const getFetch = async () => {
     setState({
       ...state,
-      isloading: true,
+      isLoading: true,
     });
 
     const resp = await fetch(url);
     const data = await resp.json();
+
     setState({
       data,
-      isloading: false,
+      isLoading: false,
       hasError: null,
     });
   };
@@ -28,7 +29,7 @@ export const useFetch = (url) => {
 
   return {
     data: state.data,
-    isloading: state.isloading,
+    isLoading: state.isLoading,
     hasError: state.hasError,
   };
 };
