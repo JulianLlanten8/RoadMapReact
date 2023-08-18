@@ -10,7 +10,7 @@ export const HomePage = () => {
         HomePage
         <small>{user?.name}</small>
       </h1>
-      <pre>{JSON.stringify(user, null, 2)}</pre>
+      <pre aria-label="preTag">{JSON.stringify(user, null, 2)}</pre>
       <hr />
     </>
   );

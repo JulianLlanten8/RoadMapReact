@@ -28,7 +28,6 @@ describe("Pruebas en <MultipleCustomHook/>", () => {
 
     render(<MultipleCustomHook />);
 
-    // console.log(screen.debug());
 
     expect(screen.getByText("Loading..."));
 
@@ -38,7 +37,6 @@ describe("Pruebas en <MultipleCustomHook/>", () => {
       name: "Next quote",
     });
 
-    console.log(nextButton.disabled);
     expect(nextButton.disabled).toBeTruthy();
   });
 

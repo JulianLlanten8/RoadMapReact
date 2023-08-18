@@ -3,7 +3,6 @@ import { useRef } from "react";
 export const FocusScreen = () => {
   const inputRef = useRef();
   const onClick = () => {
-    console.log(inputRef);
     inputRef.current.select();
   };
   return (

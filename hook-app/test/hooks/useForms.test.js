@@ -8,7 +8,6 @@ describe("Pruebas en el useForm", () => {
   };
   test("Debe de regresar los valores por defecto", () => {
     const { result } = renderHook(() => useForm(initialForm));
-    console.log(result.current);
     //Se tiene la expectativa de que useForm retorne un objeto con las siguientes propiedades
     expect(result.current).toEqual({
       name: "Julian",

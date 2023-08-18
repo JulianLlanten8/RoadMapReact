@@ -35,7 +35,6 @@ export const useAppTodo = () => {
   };
 
   const onToggleTodo = (id) => {
-    console.log(id);
     const action = {
       type: "[TODO] Toggle TODO",
       payload: id,
