@@ -4,7 +4,6 @@ describe("test asincronico", () => {
     try {
       const url = await getImagen();
       expect(typeof url).toBe("string");
-      console.log(url);
     } catch (error) {
       console.error(error);
       expect(error).toBe("No existe");

@@ -8,7 +8,6 @@ const persona = {
 // const { nombre } = persona;
 const { nombre, lastName, edad, clave } = persona;
 
-// console.log(nombre);
 
 const retornaPersona = ({ nombre, edad, clave, rango = "capitan" }) => {
   console.log(nombre, edad, clave, rango);

@@ -5,7 +5,6 @@ import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GiftGrid = ({ category }) => {
   const { images, isloading } = useFetchGifs(category);
-  console.log({ images, isloading });
 
   return (
     <>

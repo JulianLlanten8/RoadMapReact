@@ -17,7 +17,6 @@ describe("pruebas en el componente <FirsApp />", () => {
     );
     expect(getByText(title)).toBeTruthy();
     expect(getByTestId("test-title").innerHTML).toBe(title); // toBe compara que sea exactamente igual
-    console.log(getByTestId("test-title").textContent);
   });
 
   test("Debe mostrar el subtitulo enviado por prosp", () => {

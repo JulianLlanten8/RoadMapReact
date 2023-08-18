@@ -6,7 +6,6 @@ describe("Puerabas en <SecondApp/>", () => {
 
   test("Debe hacer match con el snapshot", () => {
     const { container } = render(<SecondApp title={title} />);
-    console.log(container.innerHTML);
     expect(container).toMatchSnapshot(); // Crea el snapshot y lo compara con el actual
   });
 

@@ -21,6 +21,5 @@ describe("pruebas de import", () => {
     const filter = getHeroesByOwner(owner);
     expect(filter).toEqual(heroes.filter((heroe) => heroe.owner === owner));
     expect(filter.length).toBe(3);
-    console.log(filter);
   });
 });
