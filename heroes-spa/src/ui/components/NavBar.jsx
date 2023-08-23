@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-export const Navbar = (props) => {
-  console.log(props);
+export const Navbar = (/* props */) => {
+  // console.log(props);
   //useNavigate sirve para navegar entre rutas sin necesidad de usar el componente Link y mantener el historial de navegación
   const navigate = useNavigate();
   const onLogout = () => {

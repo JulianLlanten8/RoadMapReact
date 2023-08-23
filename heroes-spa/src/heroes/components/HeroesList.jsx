@@ -1,12 +1,14 @@
-import { GetHeroByPublicer } from "../helpers";
+import { getHeroByPublicer } from "../helpers";
+import { HeroCard } from "./HeroCard";
 
 export const HeroesList = ({ publicer }) => {
-  const heroes = GetHeroByPublicer(publicer);
+  const heroes = getHeroByPublicer(publicer);
   return (
-    <ul>
+    <div className="row rows-cols-1 rows-cols-md-3 g-3">
       {heroes.map((hero) => (
-        <li key={hero.id}>{hero.superhero}</li>
+        <HeroCard key={hero.id} {...hero} />
+        
       ))}
-    </ul>
+    </div>
   );
 };

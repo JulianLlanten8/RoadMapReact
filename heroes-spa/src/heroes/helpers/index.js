@@ -1,1 +1,1 @@
-export * from "./GetHeroByPublicer";
+export * from "./getHeroByPublicer";
