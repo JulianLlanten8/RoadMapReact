@@ -11,9 +11,10 @@ export const HeroCard = ({
   const heroImg = `/assets/heroes/heroes/${id}.jpg`;
   const navigate = useNavigate();
   return (
-    <div className="col">
+    <div className="col p-3">
       <div
-        className="card bg-dark h-100 zoom cursor-pointer"
+        role="button"
+        className="card bg-dark hover-shadow h-100 zoom cursor-pointer"
         onClick={() => {
           //ir a la ruta /hero/id
           navigate(`/hero/${id}`);
