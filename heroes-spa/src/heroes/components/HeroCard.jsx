@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 export const HeroCard = ({
   id,
   superhero,
@@ -10,30 +9,31 @@ export const HeroCard = ({
   characters,
 }) => {
   const heroImg = `/assets/heroes/heroes/${id}.jpg`;
+  const navigate = useNavigate();
   return (
     <div className="col">
-      <div className="card">
-        <div className="row g-0">
-          <div className="col-4">
-            <img src={heroImg} className="card-img" alt={superhero} />
-          </div>
-
-          <div className="col-8">
-            <div className="card-body">
-              <h5 className="card-title">{superhero}</h5>
-              <p className="card-text">{alter_ego}</p>
-              {alter_ego !== characters && (
-                <p className="card-text">{characters}</p>
-              )}
-              <p className="card-text">
-                <small className="text-muted">{first_appearance}</small>
-              </p>
-
-              <Link to={`/hero/${id}`} className="btn btn-primary">
-                Mas...
-              </Link>
-            </div>
-          </div>
+      <div
+        className="card bg-dark h-100 zoom cursor-pointer"
+        onClick={() => {
+          //ir a la ruta /hero/id
+          navigate(`/hero/${id}`);
+        }}
+      >
+        <img
+          src={heroImg}
+          className="card-img-top"
+          style={{ minWidth: "200px" }}
+          alt={superhero}
+        />
+        <div className="card-body">
+          <h5 className="card-title text-info">{superhero}</h5>
+          <p className="card-text text-light">{alter_ego}</p>
+          {alter_ego !== characters && (
+            <p className="card-text text-white-50">{characters}</p>
+          )}
+        </div>
+        <div className="card-footer">
+          <small className="text-white-50">{first_appearance}</small>
         </div>
       </div>
     </div>
