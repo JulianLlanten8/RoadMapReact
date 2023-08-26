@@ -23,9 +23,9 @@ export const Hero = () => {
             className="img-thumbnail"
           />
         </div>
-        <div className="col-8">
+        <div className="col-8 bg-info">
           <h3>{hero.superhero}</h3>
-          <ul className="list-group list-group-flush">
+          <ul className="list-group list-group">
             <li className="list-group-item">
               <b>Alter ego: </b>
               {hero.alter_ego}
@@ -43,7 +43,7 @@ export const Hero = () => {
 
             <div className="d-flex justify-content-center align-content-end">
               <button
-                className="w-50 btn btn-outline-info"
+                className="w-50 btn btn-outline-danger"
                 onClick={() => onNavigateBack()}
               >
                 Return
