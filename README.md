@@ -49,19 +49,24 @@
 - [ ] Creación de proyectos completos con MERN
 - [ ] Despliegue en servidores
 
-# [Aprendiendo React](https://github.com/midudev/aprendiendo-react) [Midudev](https://github.com/midudev)⚛️
+# [Aprendiendo React](https://github.com/midudev/aprendiendo-react) de [Midudev](https://github.com/midudev)⚛️
 
-    - [ ] Introducción a React
-    - [ ] React Hooks: useState y useEffect
-    - [ ] Prueba técnica con lo aprendido
-    - [ ] Fetching de datos y Custom Hooks
-    - [ ] React Hooks: useRef, useMemo, useCallback
-    - [ ] React Hooks: useContext, useReducer, useId
-    - [ ] React Router + Lazy Loading
-    - [ ] React + TypeScript (Día 01): props y state
-    - [ ] React + TypeScript + ChatGPT - [ ]  Clon de Google Translate
-    - [ ] React Redux Toolkit + Rome Tools
-    - [ ] Prueba técnica de React con TypeScript
-    - [ ] React Query + Paginación + Infinite Scroll
-    - [ ] JavaScript Quiz con Zustand + TypeScript desde cero
-    - [ ] Hacker News con TypeScript + SWR
+- [ ] Introducción a React
+- [ ] React Hooks: useState y useEffect
+- [ ] Prueba técnica con lo aprendido
+- [ ] Fetching de datos y Custom Hooks
+- [ ] React Hooks: useRef, useMemo, useCallback
+- [ ] React Hooks: useContext, useReducer, useId
+- [ ] React Router + Lazy Loading
+- [ ] React + TypeScript (Día 01): props y state
+- [ ] React + TypeScript + ChatGPT
+- [ ] Clon de Google Translate
+- [ ] React Redux Toolkit + Rome Tools
+- [ ] Prueba técnica de React con TypeScript
+- [ ] React Query + Paginación + Infinite Scroll
+- [ ] JavaScript Quiz con Zustand + TypeScript desde cero
+- [ ] Hacker News con TypeScript + SWR
+- [ ] Prueba técnica de React con TypeScript
+- [ ] React Query + Paginación + Infinite Scroll
+- [ ] JavaScript Quiz con Zustand + TypeScript desde cero
+- [ ] Hacker News con TypeScript + SWR - Pendiente de subir
