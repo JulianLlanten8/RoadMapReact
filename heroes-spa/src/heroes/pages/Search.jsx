@@ -44,21 +44,30 @@ export const Search = () => {
         <div className="col-7">
           <h4>Results</h4>
           <hr />
-          <div className="alert alert-primary">
-            <p>Search hero</p>
-          </div>
-          <div className="alert alert-danger">
-            <p>
-              No hero whit <b>{q}</b>
-            </p>
-          </div>
-          <div className="mb-5 px-2">
-            {heroes.map((hero) => (
-              <HeroCard key={hero.id} {...hero} />
-            ))}
-          </div>
+          {q === "" ? (
+            <div className="alert alert-primary animate__animated animate__fadeIn animate__slower">
+              <p>Search hero</p>
+            </div>
+          ) : (
+            heroes.length === 0 && (
+              <div className="alert alert-danger animate__animated animate__fadeIn animate__slower">
+                <p>
+                  No hero whit <b>{q}</b>
+                </p>
+              </div>
+            )
+          )}
         </div>
       </div>
+      <main
+        className={`row row-cols-1 row-cols-md-${
+          heroes.length && heroes.length <= 6 ? heroes.length : 4
+        } mx-auto`}
+      >
+        {heroes.map((hero) => (
+          <HeroCard key={hero.id} {...hero} />
+        ))}
+      </main>
     </main>
   );
 };
