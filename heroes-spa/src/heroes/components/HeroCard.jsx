@@ -14,7 +14,7 @@ export const HeroCard = ({
     <div className="col p-3 animate__animated animate__bounce">
       <div
         role="button"
-        className="card-blur hover-shadow h-100 zoom cursor-pointer"
+        className="card card-blur hover-shadow h-100 zoom cursor-pointer"
         onClick={() => {
           //ir a la ruta /hero/id
           navigate(`/hero/${id}`);
