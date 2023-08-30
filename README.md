@@ -1,4 +1,4 @@
-# React: De cero a experto (Hooks y MERN) Fernando Herrera
+# React: De cero a experto (Hooks y MERN) [Fernando Herrera](https://github.com/Klerith)
 
 [Cada commit hace referenca a una parte del curso de fernando herrera](https://www.udemy.com/course/react-cero-experto/)
 
@@ -49,19 +49,19 @@
 - [ ] Creación de proyectos completos con MERN
 - [ ] Despliegue en servidores
 
-# Aprendiendo React Midudev⚛️
+# [Aprendiendo React](https://github.com/midudev/aprendiendo-react) [Midudev](https://github.com/midudev)⚛️
 
-    1: Introducción a React
-    2: React Hooks: useState y useEffect
-    3: Prueba técnica con lo aprendido
-    4: Fetching de datos y Custom Hooks
-    5: React Hooks: useRef, useMemo, useCallback
-    6: React Hooks: useContext, useReducer, useId
-    7: React Router + Lazy Loading
-    8: React + TypeScript (Día 01): props y state
-    9: React + TypeScript + ChatGPT - [ ]  Clon de Google Translate
-    0: React Redux Toolkit + Rome Tools
-    1: Prueba técnica de React con TypeScript
-    2: React Query + Paginación + Infinite Scroll
-    3: JavaScript Quiz con Zustand + TypeScript desde cero
-    4: Hacker News con TypeScript + SWR
+    - [ ] Introducción a React
+    - [ ] React Hooks: useState y useEffect
+    - [ ] Prueba técnica con lo aprendido
+    - [ ] Fetching de datos y Custom Hooks
+    - [ ] React Hooks: useRef, useMemo, useCallback
+    - [ ] React Hooks: useContext, useReducer, useId
+    - [ ] React Router + Lazy Loading
+    - [ ] React + TypeScript (Día 01): props y state
+    - [ ] React + TypeScript + ChatGPT - [ ]  Clon de Google Translate
+    - [ ] React Redux Toolkit + Rome Tools
+    - [ ] Prueba técnica de React con TypeScript
+    - [ ] React Query + Paginación + Infinite Scroll
+    - [ ] JavaScript Quiz con Zustand + TypeScript desde cero
+    - [ ] Hacker News con TypeScript + SWR
