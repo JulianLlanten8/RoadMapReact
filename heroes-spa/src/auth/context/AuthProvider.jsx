@@ -21,6 +21,7 @@ export const AuthProvider = ({ children }) => {
     1. El reducer que se va a utilizar
     2. El estado inicial
     3. Una función que se ejecuta al inicio para obtener el estado inicial
+    estos solo deben de resolverse una usando el state y el dispatch
   */
 
   const [authState, dispatch] = useReducer(AuthReducer, {}, init);
@@ -43,8 +44,18 @@ export const AuthProvider = ({ children }) => {
     dispatch(action);
   };
 
+  const logout = () => {
+    const action = {
+      type: types.logout,
+    };
+    dispatch(action);
+
+    localStorage.removeItem("user");
+  };
   return (
-    <AuthContext.Provider value={{ ...authState, login: login }}>
+    <AuthContext.Provider
+      value={{ ...authState, login: login, logout: logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

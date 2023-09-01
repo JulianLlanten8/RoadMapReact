@@ -3,14 +3,16 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/context/";
 
 export const Navbar = (/* props */) => {
-  const { user } = useContext(AuthContext);
-  console.log(user);
-  // console.log(props);
+  const { user, logout } = useContext(AuthContext);
+
   //useNavigate sirve para navegar entre rutas sin necesidad de usar el componente Link y mantener el historial de navegación
   const navigate = useNavigate();
   const onLogout = () => {
+    //logout() limpia el localstorage y el context con su state
+    logout();
     navigate("/login", { replace: true });
   };
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
       <Link className="navbar-brand" to="/">
