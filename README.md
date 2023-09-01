@@ -49,7 +49,7 @@
 - [ ] Creación de proyectos completos con MERN
 - [ ] Despliegue en servidores
 
-# [Aprendiendo React](https://github.com/midudev/aprendiendo-react) de [Midudev](https://github.com/midudev)⚛️
+# [Aprendiendo React ⚛️](https://github.com/midudev/aprendiendo-react) de [Midudev](https://github.com/midudev)
 
 - [ ] Introducción a React
 - [ ] React Hooks: useState y useEffect
