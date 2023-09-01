@@ -5,10 +5,25 @@ import { AuthReducer } from "./AuthReducer";
 import { types } from "../types/types";
 
 import propTypes from "prop-types";
+
+const init = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return {
+    logged: !!user,
+    user: user,
+  };
+};
 export const AuthProvider = ({ children }) => {
   const initialState = { logged: false };
 
-  const [authState, dispatch] = useReducer(AuthReducer, initialState);
+  /* 
+    use reducer recibe tres argumentos:
+    1. El reducer que se va a utilizar
+    2. El estado inicial
+    3. Una función que se ejecuta al inicio para obtener el estado inicial
+  */
+
+  const [authState, dispatch] = useReducer(AuthReducer, {}, init);
 
   const login = () => {
     const user = {
@@ -22,6 +37,9 @@ export const AuthProvider = ({ children }) => {
         user: user,
       },
     };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
     dispatch(action);
   };
 
