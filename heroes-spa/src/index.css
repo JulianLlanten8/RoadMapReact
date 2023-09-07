@@ -18,13 +18,7 @@
   }
 }
 body {
-  background-image: url("../assets/women.jpg");
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
+  background-color: oklch(26.03% 0 0);
 }
 .card-blur {
   backdrop-filter: blur(12px) saturate(180%);

@@ -8,7 +8,7 @@ export const HeroCard = ({
   first_appearance,
   characters,
 }) => {
-  const heroImg = `/assets/heroes/heroes/${id}.jpg`;
+  const heroImg = `/heroes/${id}.jpg`;
   const navigate = useNavigate();
   return (
     <div className="col p-3 animate__animated animate__bounce">
@@ -23,7 +23,7 @@ export const HeroCard = ({
         <img
           src={heroImg}
           className="card-img-top"
-          style={{ minWidth: "200px" }}
+          style={{ minWidth: "150px" }}
           alt={superhero}
         />
         <div className="card-body p-3">

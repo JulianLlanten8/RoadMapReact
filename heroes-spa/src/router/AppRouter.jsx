@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Login } from "../auth/pages/Login";
 import { Heroes } from "../heroes/index";
+import { Login } from "../auth/pages/Login";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
@@ -11,19 +11,23 @@ export const AppRouter = () => {
         {/* <Route path="login" element={<Login />} /> */}
 
         <Route
+          path="login/*"
+          element={
+            <PublicRoute>
+              {/* <LoginPage /> */}
+              <Routes>
+                <Route path="/*" element={<Login />} />
+              </Routes>
+            </PublicRoute>
+          }
+        />
+
+        <Route
           path="/*"
           element={
             <PrivateRoute>
               <Heroes />
             </PrivateRoute>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <Login />
-            </PublicRoute>
           }
         />
       </Routes>
