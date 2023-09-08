@@ -1,6 +1,10 @@
-import { AppRoutes } from "./auth/AppRoutes";
-import "./index.css";
+import { AppRouter } from "./router/AppRouter";
+import { AppTheme } from "./theme";
 
 export const JournalApp = () => {
-  return <AppRoutes />;
+  return (
+    <AppTheme>
+      <AppRouter />
+    </AppTheme>
+  );
 };
