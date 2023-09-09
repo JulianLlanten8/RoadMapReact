@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
+import { Typography } from "@mui/material";
 
 export const JournalPage = () => {
   return (
     <>
-      <h1>JournalPage</h1>
+      <Typography variant="h1">Journal</Typography>
       <Button variant="contained">Hello world</Button>
     </>
   );
