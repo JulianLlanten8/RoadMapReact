@@ -29,13 +29,17 @@
 
 ## Redux
 
-- [ ] Introducción a Redux
-- [ ] Store, Reducers y Actions
-- [ ] Conexión de Redux con React
+- [x] Introducción a Redux
+- [x] Store, Reducers y Actions, State, Middlewares, Dispatch
+- [x] Acciones asíncronas, RTK query, Redux Toolkit, Slices
+- [x] Conexión de Redux con React
 
 ## Aplicaciones MERN
 
 - [ ] Introducción a MongoDB
+- [ ] Firebase, FireStore
+- [ ] Formularios, Google SingIn, Acciones Asíncronas
+- [ ] Mantener el estado de la autenticación
 - [ ] Backend con Node.js y Express
 - [ ] Integración de React con Express
 
