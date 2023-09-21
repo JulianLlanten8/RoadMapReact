@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { checkingAuthentication, startGoogleSignIn } from "@store/auth";
 
@@ -7,14 +7,19 @@ import { Button, Grid, TextField, Typography } from "@mui/material";
 
 import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
+import { useMemo } from "react";
 
 export const Login = () => {
+  const { status } = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
 
   const { email, password, onInputChange, formState } = useForm({
     email: "hugojulian@gmail.com",
     password: "12345",
   });
+
+  const isAuthenticating = useMemo(() => status === "checking", [status]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -57,6 +62,7 @@ export const Login = () => {
         <Grid container spacing={2} sx={{ mt: 2 }}>
           <Grid item xs={12} sm={6}>
             <Button
+              disabled={isAuthenticating}
               variant="contained"
               type="submit"
               className="btn btn-primary btn-block"
@@ -68,6 +74,7 @@ export const Login = () => {
 
           <Grid item xs={12} sm={6}>
             <Button
+              disabled={isAuthenticating}
               variant="contained"
               type="submit"
               className="btn btn-primary btn-block"

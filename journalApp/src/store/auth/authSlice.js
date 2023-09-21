@@ -16,11 +16,23 @@ export const authSlice = createSlice({
   //funciones que modifican el estado
   reducers: {
     login: (state, action) => {
-      //console.log(action.payload);
+      state.status = "authenticated";
+      state.uid = action.payload.uid;
+      state.email = action.payload.email;
+      state.displayName = action.payload.displayName;
+      state.photoURL = action.payload.photoURL;
+      state.errorMessage = null;
     },
-    logout: (state) => {
-      //console.log('logout');
+
+    logout: (state, { payload }) => {
+      state.status = "not-authenticated";
+      state.uid = null;
+      state.email = null;
+      state.displayName = null;
+      state.photoURL = null;
+      state.errorMessage = payload.errorMessage;
     },
+    
     checkingCredentials: (state) => {
       //console.log('checkingCredentials');
     },
