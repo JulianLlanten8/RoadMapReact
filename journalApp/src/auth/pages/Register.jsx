@@ -1,18 +1,35 @@
-import { Google } from "@mui/icons-material";
-import { Button, Grid, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import { AuthLayout } from "../layout/AuthLayout";
+import { useForm } from "@hooks";
+
+const formData = {
+  displayName: "example",
+  email: "example@gmail.com",
+  password: "12345",
+};
 
 export const Register = () => {
+  const { displayName, email, password, onInputChange, formState } =
+    useForm(formData);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(formState);
+  };
+
   return (
-    <AuthLayout title={"Login"}>
-      <form>
+    <AuthLayout title={"Crear cuenta"}>
+      <form onSubmit={onSubmit}>
         <Grid item xs={12} sx={{ mt: 2 }}>
           <TextField
             label="Nombre completo"
             type="text"
             placeholder="Nombre completo"
             fullWidth
+            name="displayName"
+            value={displayName}
+            onChange={onInputChange}
           />
         </Grid>
 
@@ -22,6 +39,9 @@ export const Register = () => {
             type="email"
             placeholder="Correo@google.com"
             fullWidth
+            name="email"
+            value={email}
+            onChange={onInputChange}
           />
         </Grid>
 
@@ -31,6 +51,9 @@ export const Register = () => {
             type="password"
             placeholder="Contraseña"
             fullWidth
+            name="password"
+            value={password}
+            onChange={onInputChange}
           />
         </Grid>
 
