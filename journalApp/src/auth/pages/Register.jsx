@@ -13,6 +13,7 @@ import {
 
 import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
+import { startCreatingUserWithEmailPassword } from "../../store/auth";
 
 const formData = {
   email: "",
@@ -31,6 +32,7 @@ const formValidations = {
 
 export const Register = () => {
   const dispatch = useDispatch();
+
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const { status, errorMessage } = useSelector((state) => state.auth);
@@ -54,7 +56,7 @@ export const Register = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     setFormSubmitted(true);
-    console.log(formState);
+    dispatch(startCreatingUserWithEmailPassword(formState));
     if (!isFormValid) return;
   };
 

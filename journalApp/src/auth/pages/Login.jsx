@@ -23,12 +23,10 @@ export const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formState);
     dispatch(checkingAuthentication());
   };
-
+  //login con google
   const onGoogleLogin = () => {
-    console.log("Login con google");
     dispatch(startGoogleSignIn());
   };
 
