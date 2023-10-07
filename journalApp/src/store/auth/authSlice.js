@@ -30,11 +30,11 @@ export const authSlice = createSlice({
       state.email = null;
       state.displayName = null;
       state.photoURL = null;
-      state.errorMessage = payload.errorMessage;
+      state.errorMessage = payload;
     },
-    
+
     checkingCredentials: (state) => {
-      //console.log('checkingCredentials');
+      state.status = "checking";
     },
   },
 });
