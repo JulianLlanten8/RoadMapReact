@@ -15,10 +15,10 @@ export const NothingSelectedView = () => {
         borderRadius: 3,
       }}
     >
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <StarOutline sx={{ fontSize: 200, color: "primary.light" }} />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Typography variant="h4" color="primary.light">
           Seleccione o crea una nota
         </Typography>

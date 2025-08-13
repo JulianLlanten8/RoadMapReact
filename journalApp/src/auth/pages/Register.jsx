@@ -67,7 +67,7 @@ export const Register = () => {
         className="animate__animated animate__fadeIn animate__faster"
       >
         <Grid container>
-          <Grid item xs={12} sx={{ mt: 2 }}>
+          <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
             <TextField
               label="Nombre completo"
               type="text"
@@ -81,7 +81,7 @@ export const Register = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sx={{ mt: 2 }}>
+          <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
             <TextField
               label="Correo"
               type="email"
@@ -95,7 +95,7 @@ export const Register = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sx={{ mt: 2 }}>
+          <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
             <TextField
               label="Contraseña"
               type="password"
@@ -110,11 +110,11 @@ export const Register = () => {
           </Grid>
 
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-            <Grid item xs={12} display={!!errorMessage ? "" : "none"}>
+            <Grid size={{ xs: 12 }} display={!!errorMessage ? "" : "none"}>
               <Alert severity="error">{errorMessage}</Alert>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Button type="submit" variant="contained" fullWidth>
                 Crear cuenta
               </Button>

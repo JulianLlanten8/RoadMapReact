@@ -33,7 +33,7 @@ export const Login = () => {
   return (
     <AuthLayout title={"Login"}>
       <form onSubmit={onSubmit}>
-        <Grid item xs={12} sx={{ mt: 2 }}>
+        <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
           <TextField
             label="Correo"
             type="email"
@@ -45,7 +45,7 @@ export const Login = () => {
           />
         </Grid>
 
-        <Grid item xs={12} sx={{ mt: 2 }}>
+        <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
           <TextField
             label="Contraseña"
             type="password"
@@ -58,7 +58,7 @@ export const Login = () => {
         </Grid>
 
         <Grid container spacing={2} sx={{ mt: 2 }}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12 }} sm={6}>
             <Button
               disabled={isAuthenticating}
               variant="contained"
@@ -70,7 +70,7 @@ export const Login = () => {
             </Button>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12 }} sm={6}>
             <Button
               disabled={isAuthenticating}
               variant="contained"

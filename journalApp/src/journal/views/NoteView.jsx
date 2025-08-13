@@ -10,13 +10,13 @@ export const NoteView = () => {
       justifyContent="space-between"
       sx={{ mb: 1 }}
     >
-      <Grid item xs={12} md={6}>
+      <Grid size={{xs : 12, md: 6}} >
         <Typography fontSize={39} fontWeight="light">
           28 de agosto 2023
         </Typography>
       </Grid>
 
-      <Grid item>
+      <Grid>
         <Button color="primary" sx={{ p: 2 }}>
           <SaveAltOutlined xs={{ fontSize: 30, mr: 1 }} />
           Guardar
