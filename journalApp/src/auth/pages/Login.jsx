@@ -16,7 +16,7 @@ export const Login = () => {
 
   const { email, password, onInputChange, formState } = useForm({
     email: "hugojulian@gmail.com",
-    password: "12345",
+    password: "prueba12345",
   });
 
   const isAuthenticating = useMemo(() => status === "checking", [status]);
@@ -38,6 +38,7 @@ export const Login = () => {
             label="Correo"
             type="email"
             placeholder="Correo@google.com"
+            autoComplete="username"
             fullWidth
             name={email}
             value={email}
@@ -53,12 +54,13 @@ export const Login = () => {
             fullWidth
             name={password}
             value={password}
+            autoComplete="current-password"
             onChange={onInputChange}
           />
         </Grid>
 
         <Grid container spacing={2} sx={{ mt: 2 }}>
-          <Grid size={{ xs: 12 }} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Button
               disabled={isAuthenticating}
               variant="contained"
@@ -70,7 +72,7 @@ export const Login = () => {
             </Button>
           </Grid>
 
-          <Grid size={{ xs: 12 }} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Button
               disabled={isAuthenticating}
               variant="contained"

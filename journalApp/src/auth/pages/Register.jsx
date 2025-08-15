@@ -32,7 +32,6 @@ const formValidations = {
 
 export const Register = () => {
   const dispatch = useDispatch();
-
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const { status, errorMessage } = useSelector((state) => state.auth);
@@ -86,6 +85,7 @@ export const Register = () => {
               label="Correo"
               type="email"
               placeholder="correo@google.com"
+              autoComplete="username"
               fullWidth
               name="email"
               value={email}
@@ -103,6 +103,7 @@ export const Register = () => {
               fullWidth
               name="password"
               value={password}
+              autoComplete="current-password"
               onChange={onInputChange}
               error={!!passwordValid && formSubmitted}
               helperText={passwordValid}
