@@ -1,6 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import { HomePage } from "@/heroes/pages/home/HomePage";
-import { SearchPage } from "@/heroes/pages/search/SearchPage";
 import { AdminPage } from "@/admin/pages/AdminPage";
 import { HeroesLayout } from "@/heroes/pages/layouts/HeroesLayout";
 import { AdminLayout } from "@/admin/layout/AdminLayout";
@@ -28,7 +27,7 @@ export const AppRouter = createBrowserRouter([
       },
       {
         path: "*",
-        element: <Navigate to="/" />
+        element: <Navigate to="/" />,
       },
     ],
   },
