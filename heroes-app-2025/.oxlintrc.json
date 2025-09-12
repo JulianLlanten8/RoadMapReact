@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": ["dist"],
+  "env": {
+    "browser": true,
+    "es2024": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "plugins": ["typescript", "react"],
+      "rules": {
+        // ✅ Core JS correctness
+        "no-constant-condition": "error",
+        "no-debugger": "error",
+        "no-unused-vars": "error",
+        "no-empty": "error",
+
+        // ✅ TypeScript
+        "typescript/no-explicit-any": "warn",
+        "typescript/no-namespace": "error",
+        "typescript/prefer-as-const": "error",
+
+        // ✅ React
+        "react/rules-of-hooks": "error",
+        "react/exhaustive-deps": "warn"
+      }
+    }
+  ]
+}
