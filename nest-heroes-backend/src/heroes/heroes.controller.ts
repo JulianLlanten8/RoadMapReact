@@ -12,7 +12,7 @@ import { HeroesService } from './heroes.service';
 import { CreateHeroDto } from './dto/create-hero.dto';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 import { UpdateHeroDto } from './dto/update-hero.dto';
-import { AdvancedSearchDto } from './dto/advande-search.dto';
+import { AdvancedSearchDto } from './dto/advance-search.dto';
 import { Hero } from './entities/hero.entity';
 
 @Controller('heroes')

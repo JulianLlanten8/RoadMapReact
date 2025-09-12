@@ -8,7 +8,7 @@ import { UpdateHeroDto } from './dto/update-hero.dto';
 import { Hero } from './entities/hero.entity';
 import { heroesData } from 'src/data/heroes.data';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
-import { AdvancedSearchDto } from './dto/advande-search.dto';
+import { AdvancedSearchDto } from './dto/advance-search.dto';
 
 @Injectable()
 export class HeroesService {
