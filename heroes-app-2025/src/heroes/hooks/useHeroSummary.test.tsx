@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { useHeroSummary } from "./useHeroSummary";
 import { getSummaryAction } from "../actions/get-summary.action";
+import type { SummaryInformationResponse } from "../types/summary-information.response";
 
 vi.mock("../actions/get-summary.action", () => ({
   getSummaryAction: vi.fn(),
