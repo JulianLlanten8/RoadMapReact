@@ -9,7 +9,7 @@ describe("Pruebas componentes <GiftGrid/>", () => {
   test("Debe de mostrar el loading inicialmente", () => {
     useFetchGifs.mockReturnValue({
       images: [],
-      isloading: true,
+      isLoading: true,
     });
     render(<GiftGrid category={category} />);
 
@@ -33,7 +33,7 @@ describe("Pruebas componentes <GiftGrid/>", () => {
 
     useFetchGifs.mockReturnValue({
       images: gifs,
-      isloading: false,
+      isLoading: false,
     });
 
     render(<GiftGrid category={category} />);

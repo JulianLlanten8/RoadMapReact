@@ -4,20 +4,20 @@ import { useFetchGifs } from "../../src/hooks/useFetchGifs";
 describe("Pruebas en eol hook de useFetchGifs", () => {
   test("Debe de regresar el estado inicial", () => {
     const { result } = renderHook(() => useFetchGifs("Futurama"));
-    const { images, isloading } = result.current;
+    const { images, isLoading } = result.current;
     expect(images.length).toBe(0);
-    expect(isloading).toBeTruthy();
+    expect(isLoading).toBeTruthy();
   });
 
-  test("Debe de retornar un arreglo de imagenes y isloading en false", async () => {
+  test("Debe de retornar un arreglo de imagenes y isLoading en false", async () => {
     const { result } = renderHook(() => useFetchGifs("Futurama"));
 
     await waitFor(() =>
       expect(result.current.images.length).toBeGreaterThan(0)
     );
 
-    const { images, isloading } = result.current;
+    const { images, isLoading } = result.current;
     expect(images.length).toBeGreaterThan(0);
-    expect(isloading).toBeFalsy();
+    expect(isLoading).toBeFalsy();
   });
 });
