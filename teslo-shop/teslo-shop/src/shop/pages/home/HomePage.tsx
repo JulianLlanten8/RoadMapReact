@@ -6,10 +6,7 @@ import { ProductsGrid } from "@/shop/components/ProductsGrid";
 export const HomePage = () => {
   return (
     <div>
-      <CustomJumbotron
-        title="Todos los productos"
-        subtitle="Ropa minimalista y elegante inspirada en el diseño futurista de Tesla."
-      />
+      <CustomJumbotron title="Todos los productos" />
       {/* Products Grid */}
       <ProductsGrid products={products} />
       <CustomPagination totalPages={7} />

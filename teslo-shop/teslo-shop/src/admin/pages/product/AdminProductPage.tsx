@@ -1,5 +1,3 @@
-import React from "react";
-
 export const AdminProductPage = () => {
-  return <div>AdminProductPage</div>;
+  return <div>Esto es una prueba AdminProductPage</div>;
 };
