@@ -43,7 +43,7 @@ export const QuickActions: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+    <div className="bg-background p-6 rounded-xl shadow-sm border border-gray-200">
       <h3 className="text-lg font-semibold text-gray-900 mb-4">
         Quick Actions
       </h3>

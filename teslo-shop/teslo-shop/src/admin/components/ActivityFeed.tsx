@@ -34,8 +34,8 @@ export const ActivityFeed: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+    <div className="bg-background p-6 rounded-xl shadow-sm border border-gray-200">
+      <h3 className="text-lg font-semibold  dark:text-white mb-4">
         Recent Activity
       </h3>
       <div className="space-y-4">
@@ -47,7 +47,7 @@ export const ActivityFeed: React.FC = () => {
                 <Icon size={16} className="text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-medium text-gray-900 dark:text-white">
                   {activity.title}
                 </p>
                 <p className="text-sm text-gray-600">{activity.description}</p>

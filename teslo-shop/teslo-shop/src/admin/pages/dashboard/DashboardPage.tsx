@@ -90,9 +90,11 @@ export const DashboardPage = () => {
 
       {/* Additional Dashboard Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div className="bg-background p-6 rounded-xl shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Top Pages</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              Top Pages
+            </h3>
             <Eye size={20} className="text-gray-400" />
           </div>
           <div className="space-y-3">
@@ -107,8 +109,10 @@ export const DashboardPage = () => {
                 className="flex items-center justify-between py-2"
               >
                 <div>
-                  <p className="font-medium text-gray-900">{item.page}</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="font-medium text-gray-900 dark:text-gray-400">
+                    {item.page}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {item.views.toLocaleString()} views
                   </p>
                 </div>
@@ -126,12 +130,12 @@ export const DashboardPage = () => {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div className="bg-background p-6 rounded-xl shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               System Status
             </h3>
-            <BarChart3 size={20} className="text-gray-400" />
+            <BarChart3 size={20} className="text-fuchsia-500" />
           </div>
           <div className="space-y-4">
             {[
@@ -164,8 +168,12 @@ export const DashboardPage = () => {
                 <div className="flex items-center space-x-3">
                   <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
                   <div>
-                    <p className="font-medium text-gray-900">{item.service}</p>
-                    <p className="text-sm text-gray-600">{item.status}</p>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      {item.service}
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {item.status}
+                    </p>
                   </div>
                 </div>
                 <span className="text-sm font-medium text-gray-900">

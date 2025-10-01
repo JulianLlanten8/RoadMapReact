@@ -42,7 +42,7 @@ export const AdminSidebar: React.FC<SidebarProps> = ({
 
   return (
     <div
-      className={`bg-white border-r border-gray-200 transition-all duration-300 ease-in-out ${
+      className={`bg-background border-r border-gray-200 transition-all duration-300 ease-in-out ${
         isCollapsed ? "w-18" : "w-64"
       } flex flex-col`}
     >
@@ -91,7 +91,7 @@ export const AdminSidebar: React.FC<SidebarProps> = ({
               JD
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-gray-900 truncate">
+              <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
                 John Doe
               </p>
               <p className="text-xs text-gray-500 truncate">john@company.com</p>
