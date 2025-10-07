@@ -47,6 +47,7 @@
 ## Zustand
 
 - [x] Introducción a zustand
+- [x] Store(State), Getters, Actions
 
 ## Aplicaciones MERN
 
