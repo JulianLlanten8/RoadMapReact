@@ -10,7 +10,6 @@ interface Props {
   products: Product[];
 }
 export const ProductsGrid = ({ products }: Props) => {
-  console.log(products);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const viewMode = searchParams.get("viewMode") || "grid";

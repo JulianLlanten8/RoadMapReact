@@ -11,9 +11,9 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { CustomLogo } from "@/components/CustomLogo";
+import { CustomLogo } from "@/components/custom/CustomLogo";
 import { Link, useLocation } from "react-router";
-import { useAuthStore } from "@/auth/storage/store.auth";
+import { useAuthStore } from "@/auth/storage/auth.store";
 
 interface SidebarProps {
   isCollapsed: boolean;

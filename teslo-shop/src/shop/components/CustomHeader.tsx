@@ -6,12 +6,12 @@ import { useRef } from "react";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { KeyboardEvent } from "react";
 import { cn } from "@/lib/utils";
-import { CustomLogo } from "@/components/CustomLogo";
-import { useAuthStore } from "@/auth/storage/store.auth";
+import { CustomLogo } from "@/components/custom/CustomLogo";
+import { useAuthStore } from "@/auth/storage/auth.store";
 
 export const CustomHeader = () => {
-  const { user, logout } = useAuthStore();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { authStatus, isAdmin, logout } = useAuthStore();
 
   const { gender } = useParams();
 
@@ -103,23 +103,30 @@ export const CustomHeader = () => {
 
             <ThemeToggle />
 
-            {!user ? (
+            {authStatus === "not-authenticated" ? (
               <Link to="/auth/login">
                 <Button variant="default" size="sm" className="ml-2">
                   Login
                 </Button>
               </Link>
             ) : (
-              <Button onClick={logout} variant="outline" size="sm" className="ml-2">
+              <Button
+                onClick={logout}
+                variant="outline"
+                size="sm"
+                className="ml-2"
+              >
                 Cerrar sesión
               </Button>
             )}
 
-            <Link to="/admin">
-              <Button variant="destructive" size="sm" className="ml-2">
-                Admin
-              </Button>
-            </Link>
+            {isAdmin() && (
+              <Link to="/admin">
+                <Button variant="destructive" size="sm" className="ml-2">
+                  Admin
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { CustomLogo } from "@/components/CustomLogo";
+import { CustomLogo } from "@/components/custom/CustomLogo";
 
 export const CustomFooter = () => {
   return (

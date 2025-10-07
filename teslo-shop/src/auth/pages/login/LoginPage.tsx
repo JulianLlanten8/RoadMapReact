@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CustomLogo } from "@/components/CustomLogo";
+import { CustomLogo } from "@/components/custom/CustomLogo";
 import { Link, useNavigate } from "react-router";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
-import { useAuthStore } from "@/auth/storage/store.auth";
+import { useAuthStore } from "@/auth/storage/auth.store";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
