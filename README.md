@@ -27,12 +27,26 @@
 - [x] Navegación entre rutas
 - [x] Parámetros y redirecciones
 
-## Redux
+## Tanstack Query
+
+- [x] Instalación y configuration y devtools
+- [x] Guardado de parámetros y obtención de parámetros
+
+## Zod
+
+- [x] Instalación y configuration
+- [x] Validación de datos y tipos
+
+## Redux - se esta remplazando por zustand
 
 - [x] Introducción a Redux
 - [x] Store, Reducers y Actions, State, Middlewares, Dispatch
 - [x] Acciones asíncronas, RTK query, Redux Toolkit, Slices
 - [x] Conexión de Redux con React
+
+## Zustand
+
+- [x] Introducción a zustand
 
 ## Aplicaciones MERN
 
@@ -71,6 +85,5 @@
 - [ ] JavaScript Quiz con Zustand + TypeScript desde cero
 - [ ] Hacker News con TypeScript + SWR
 - [ ] Prueba técnica de React con TypeScript
-- [ ] React Query + Paginación + Infinite Scroll
 - [ ] JavaScript Quiz con Zustand + TypeScript desde cero
 - [ ] Hacker News con TypeScript + SWR - Pendiente de subir
