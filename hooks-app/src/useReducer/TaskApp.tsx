@@ -12,8 +12,6 @@ export const TasksApp = () => {
   const [inputValue, setInputValue] = useState("");
   //const [todos, setTodos] = useState<Todo[]>([]);
 
-
-
   const [state, dispatch] = useReducer(taskReducer, getTaskInitialState());
 
   useEffect(() => {
@@ -44,7 +42,7 @@ export const TasksApp = () => {
   const { todos, completed: completedCount, length: totalCount } = state;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4">
+    <section className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-400 p-4">
       <div className="mx-auto max-w-2xl">
         <div className="mb-8 text-center">
           <h1 className="text-4xl font-bold text-slate-800 mb-2">
@@ -123,20 +121,20 @@ export const TasksApp = () => {
                     key={todo.id}
                     className={`flex items-center gap-3 p-3 rounded-lg border transition-all duration-200 ${
                       todo.completed
-                        ? "bg-slate-50 border-slate-200"
-                        : "bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm"
+                        ? "bg-gray-200 border-gray-300" // Color para tareas completadas
+                        : "bg-blue-50 border-blue-300 hover:border-blue-400 hover:shadow-lg" // Color para tareas activas
                     }`}
                   >
                     <Checkbox
                       checked={todo.completed}
                       onCheckedChange={() => toggleTodo(todo.id)}
-                      className="data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500"
+                      className="data-[state=checked]:bg-green-600 data-[state=checked]:border-green-600" // Color del checkbox
                     />
                     <span
                       className={`flex-1 transition-all duration-200 ${
                         todo.completed
-                          ? "text-slate-500 line-through"
-                          : "text-slate-800"
+                          ? "text-gray-500 line-through" // Texto para tareas completadas
+                          : "text-gray-900" // Texto para tareas activas
                       }`}
                     >
                       {todo.text}
@@ -156,6 +154,6 @@ export const TasksApp = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </section>
   );
 };

@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import { CounterApp } from "./CounterApp";
 import "./styles.css";
 
-// Se renderiza el componente App en el elemento con id root
+// Se renderisa el componente App en el elemento con id root
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <HelloWorld /> */}
