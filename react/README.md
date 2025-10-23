@@ -4,9 +4,9 @@ Este proyecto es una introduccion a lo mas basico que y primordial que es JavaSc
 ![gift-random](public/gift-random.png)
 
 ## Instrucciones
-    ```sh
-        bun i
-    ```
-    ```sh
-        bun run dev
-    ```
+```sh
+    bun i
+```
+```sh
+    bun run dev
+```
