@@ -1,6 +1,15 @@
 # React: De cero a experto (Hooks y MERN) [Fernando Herrera](https://github.com/Klerith)
 
-[Cada commit hace referenca a una parte del curso de fernando herrera](https://www.udemy.com/course/react-cero-experto/)
+[curso de fernando herrera](https://www.udemy.com/course/react-cero-experto/)
+
+## Algunos proyectos fueron:
+| | |
+|:-------------------------:|:-------------------------:|
+[Teslo Shop](https://teslo-shop.julianll.dev) ![alt text](teslo-shop/public/teslo-shop.webp) |[Heroes-2025](https://heroes-2025.julianll.dev/) ![heroes-2025](heroes-app-2025/docs/heroes-preview.png) | 
+[gif-app](https://gif-app.julianll.dev/) ![gif-app](gif-app/public/gif-app.webp) |  [heroes-2022](https://react-super-heroes.julianll.dev/) ![heroes-2022](heroes-spa/public/heroes.png) 
+hooks  ![hooks](hooks-app/public/imgs/preview.png) | Redux Toolkit ![Redux Toolkit](toolkin-redux/public/redux-toolkin.png)
+React inicio ![React inicio](react/public/gift-random.png) | 
+
 
 ## Introducción a React
 
